@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "982838911670",
+    "firebase_url": "https://galaxyspace-a2382.firebaseio.com",
+    "project_id": "galaxyspace-a2382",
+    "storage_bucket": "galaxyspace-a2382.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982838911670:android:b34a8a0964b7bcd7523c17",
+        "android_client_info": {
+          "package_name": "com.Piekarski.GalaxySpace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982838911670-aht4i1np86v8gih2370gmfnotdmu556b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_ht6Ua8yYelvTUhRmwpm2i3QhD8_7JEM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982838911670-aht4i1np86v8gih2370gmfnotdmu556b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
