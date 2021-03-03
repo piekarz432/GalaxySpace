@@ -9,21 +9,56 @@ public class SelectShip : MonoBehaviour
     [SerializeField]
     private Object[] ships;
 
+    private Shop shop;
 
+    private void Awake()
+    {
+        shop = FindObjectOfType<Shop>();
+        selectShip();
+        
+    }
     private void Start()
     {
 
+       
     }
 
     private void Update()
     {
     }
 
-    public void selectShip(int index)
+    private void selectShip()
     {
-        if(index == 0)
+        if (shop.selectedShip == 0)
         {
             Instantiate(ships[0]);
+        } else if (shop.selectedShip == 1)
+        {
+            Instantiate(ships[1]);
+        }
+        else if (shop.selectedShip == 2)
+        {
+            Instantiate(ships[2]);
+        }
+        else if (shop.selectedShip == 3)
+        {
+            Instantiate(ships[3]);
+        }
+        else if (shop.selectedShip == 4)
+        {
+            Instantiate(ships[4]);
+        }
+        else if (shop.selectedShip == 5)
+        {
+            Instantiate(ships[5]);
+        }
+        else if (shop.selectedShip == 6)
+        {
+            Instantiate(ships[6]);
+        }
+        else if (shop.selectedShip == 7)
+        {
+            Instantiate(ships[7]);
         }
     }
 }

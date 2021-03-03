@@ -25,6 +25,7 @@ public class Shop : MonoBehaviour
     public Text coinsUiText;
 
     public int coins;
+    public int selectedShip;
 
     public List<int> boughtSip;
 

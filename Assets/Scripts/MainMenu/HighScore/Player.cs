@@ -25,17 +25,19 @@ using UnityEngine;
     public List<Player> playersData;
     public List<int> boughtShip;
     public int coins;
+    public int selectedShip;
 
     public PlayerData()
     {
 
     }
 
-    public PlayerData(List<Player> playersData, List<int> boughtShip, int coins)
+    public PlayerData(List<Player> playersData, List<int> boughtShip, int coins, int selectedShip)
     {
         this.playersData = playersData;
         this.boughtShip = boughtShip;
         this.coins = coins;
+        this.selectedShip = selectedShip;
     }
    
 }

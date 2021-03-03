@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
 	private int money=0;
+
+    public Shipe shipe;
     public int Money
 	{
 		get{return money;}
@@ -25,7 +27,8 @@ public class GameManager : MonoBehaviour {
     private void Start()
     {
         //Money = 0;
-        FindObjectOfType<Shipe>().ShipDestroyed += () => GameEnded();
+        shipe = FindObjectOfType<Shipe>();
+        shipe.ShipDestroyed += () => GameEnded();
 
     }
 

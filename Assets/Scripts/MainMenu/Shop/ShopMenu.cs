@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ShopMenu : MonoBehaviour
 {
-    [System.Serializable] class ItemShop
+    [System.Serializable] public class ItemShop
     {
         public Sprite image;
         public int price;
@@ -16,6 +16,7 @@ public class ShopMenu : MonoBehaviour
 
     [SerializeField]
     private List<ItemShop> shopItemList;
+    public List<ItemShop> ShopItemList { get => shopItemList;}
 
     [SerializeField]
     private GameObject itemTemplate;
@@ -35,6 +36,7 @@ public class ShopMenu : MonoBehaviour
     [SerializeField]
     private List<Toggle> toggles;
 
+    
 
     private void Awake()
     {
@@ -46,7 +48,8 @@ public class ShopMenu : MonoBehaviour
 
         //selectShip = FindObjectOfType<SelectShip>();
         Time.timeScale = 1;
-
+        //tutaj
+        shopItemList[Shop.instance.selectedShip].isSelected = true;
         Shop.instance.coinsUiText = GameObject.Find("Money").GetComponentInChildren<Text>();
         
         CreateShopItem();
@@ -126,11 +129,35 @@ public class ShopMenu : MonoBehaviour
         {
             if(toggles[0].isOn)
             {
-                //selectShip.selectShip(0);
+                Shop.instance.selectedShip = 0;
             }
             else if (toggles[1].isOn)
             {
-                Debug.Log("InnyStatek");
+                Shop.instance.selectedShip = 1;
+            }
+            else if (toggles[2].isOn)
+            {
+                Shop.instance.selectedShip = 2;
+            }
+            else if (toggles[3].isOn)
+            {
+                Shop.instance.selectedShip = 3;
+            }
+            else if (toggles[4].isOn)
+            {
+                Shop.instance.selectedShip = 4;
+            }
+            else if (toggles[5].isOn)
+            {
+                Shop.instance.selectedShip = 5;
+            }
+            else if (toggles[6].isOn)
+            {
+                Shop.instance.selectedShip = 6;
+            }
+            else if (toggles[7].isOn)
+            {
+                Shop.instance.selectedShip = 7;
             }
         }
 

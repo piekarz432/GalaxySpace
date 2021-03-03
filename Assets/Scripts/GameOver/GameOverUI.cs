@@ -2,7 +2,6 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
 public class GameOverUI : MonoBehaviour
 {
     [SerializeField]
@@ -79,7 +78,7 @@ public class GameOverUI : MonoBehaviour
 
     private void SaveGame()
     {
-        PlayerData tmpPlayerData = new PlayerData(HighScore.instance.players, Shop.instance.boughtSip, Shop.instance.coins);
+        PlayerData tmpPlayerData = new PlayerData(HighScore.instance.players, Shop.instance.boughtSip, Shop.instance.coins, Shop.instance.selectedShip);
         BinarySerializer.Save(tmpPlayerData, "playerdata");
     }
 
