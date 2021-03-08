@@ -21,5 +21,11 @@ public class LoadLevel : MonoBehaviour
         //FindObjectOfType<SelectShip>().ShowWarning();
     }
 
+    private void OnApplicationQuit()
+    {
+        PlayerData tmpPlayerData = new PlayerData(HighScore.instance.players, Shop.instance.boughtSip, Shop.instance.coins, Shop.instance.selectedShip);
+        BinarySerializer.Save(tmpPlayerData, "playerdata");
+    }
+
 
 }

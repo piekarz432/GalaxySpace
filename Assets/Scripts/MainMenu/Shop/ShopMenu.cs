@@ -49,7 +49,11 @@ public class ShopMenu : MonoBehaviour
         //selectShip = FindObjectOfType<SelectShip>();
         Time.timeScale = 1;
         //tutaj
-        shopItemList[Shop.instance.selectedShip].isSelected = true;
+        if(Shop.instance.selectedShip != -1)
+        {
+            shopItemList[Shop.instance.selectedShip].isSelected = true;
+        }
+        
         Shop.instance.coinsUiText = GameObject.Find("Money").GetComponentInChildren<Text>();
         
         CreateShopItem();

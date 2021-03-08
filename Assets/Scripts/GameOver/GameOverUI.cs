@@ -33,7 +33,7 @@ public class GameOverUI : MonoBehaviour
         record.text = GameState.GetRecord().ToString();
         money.text = GameState.getCoins().ToString();
 
-        Shop.instance.coins += int.Parse(money.text);
+        //Shop.instance.coins += int.Parse(money.text);
     }
 
     private void ShowSavePanel()

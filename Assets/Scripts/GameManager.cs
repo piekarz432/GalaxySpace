@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour {
     
     void UpdateMoney()
     {
-        Shop.instance.coins = Money;
+        Shop.instance.coins += Money;
     }
 
     void GameEnded()
