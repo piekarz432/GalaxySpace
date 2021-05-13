@@ -6,19 +6,31 @@ using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour
 {
+    private void Start()
+    {
+    }
     public void Load()
     {
-         SceneManager.LoadScene("Level");
+        if (Shop.instance.selectedShip == -1)
+        {
+            ShowWarning();
+        }
+        else
+        {
+            SceneManager.LoadScene("Level");
+        }
+
     }
 
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");
+
     }
 
     public void ShowWarning()
     {
-        //FindObjectOfType<SelectShip>().ShowWarning();
+        FindObjectOfType<Warning>().showWarning();
     }
 
     private void OnApplicationQuit()

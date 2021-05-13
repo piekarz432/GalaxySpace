@@ -48,7 +48,6 @@ public class ShopMenu : MonoBehaviour
 
         //selectShip = FindObjectOfType<SelectShip>();
         Time.timeScale = 1;
-        //tutaj
         if(Shop.instance.selectedShip != -1)
         {
             shopItemList[Shop.instance.selectedShip].isSelected = true;
